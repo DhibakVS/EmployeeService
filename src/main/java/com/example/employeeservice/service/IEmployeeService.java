@@ -4,8 +4,10 @@ import com.example.employeeservice.entity.Employee;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.Optional;
+
 public interface IEmployeeService {
-    Employee getEmployee(Long id);
+    Optional<Employee> getEmployee(Long id);
     Page<Employee> getAllEmployees(Pageable pageable);
     Employee addEmployee(Employee employee);
     Employee updateEmployee(Long id, Employee employee);
